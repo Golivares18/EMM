@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+}
+
+.animation {
+    width: 20%; 
+    top: 50%; 
+    position: absolute; 
+    left: 40%; 
+    border-bottom: 5px solid white; 
+    overflow: hidden; 
+    animation: animate 2s linear forwards;    width: 20%;
+}
+
+@keyframes animate {
+    0% { 
+        width: 0px; 
+        height: 0px; 
+    } 
+
+    30% { 
+        width: 50px; 
+        height: 0px; 
+    } 
+
+    60% { 
+        width: 50px; 
+        height: 80px; 
+    } 
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    color: white;
+}
+
+h2, p, ul, li {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    color: white;
+}
