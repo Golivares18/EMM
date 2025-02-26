@@ -1,44 +1,40 @@
 body {
-    background-color: black;
+    background-color: #1a1a1a;
+    font-family: 'Orbitron',sans-serif;
 }
 
-.animation {
-    width: 20%; 
-    top: 50%; 
-    position: absolute; 
-    left: 40%; 
-    border-bottom: 5px solid rgb(31, 129, 228); 
-    overflow: hidden; 
-    animation: animate 2s linear forwards;    
+.header {
+    text-align: center;
+    background-color: #ffffff;
+    border: #339ef5;
+    border-style: solid;
+    border-radius: 50px;
 }
 
-@keyframes animate {
-    0% { 
-        width: 0px; 
-        height: 0px; 
-    } 
-
-    30% { 
-        width: 50px; 
-        height: 0px; 
-    } 
-
-    60% { 
-        width: 50px; 
-        height: 80px; 
-    } 
+.bubbles, .facebook, .instagram, .website {
+    text-align: center;
+    background-color: #ffffff;
+    border: #339ef5;
+    border-style: solid;
+    border-radius: 40px;
+    width: 450px;
+    height: fit-content;
 }
+
 
 h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Orbitron',sans-serif;
     font-style: italic;
-    font-size:10px;
-    color: white;
-    text-shadow: 1px 0 #2d2d2d00;
+    font-size:50px;
+    color: #339ef5;
+    text-shadow: 3px 0 #096bdb;
 }
 
 h2, p, ul, li {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Orbitron',sans-serif;
     font-style: italic;
-    color: white;
+    font-size:50px;
+    font-style: italic;
+    color: #339ef5;
+    text-shadow: 3px 0 #000000;
 }
