@@ -3,7 +3,7 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    display: grid;
+    position: absolute;
     height: 100vh;
     background-color: #000000;
     overflow: hidden;
@@ -12,7 +12,7 @@ body {
 
 .header {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: moveToTop 2s forwards 4s;
