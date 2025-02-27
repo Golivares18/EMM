@@ -1,19 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    display: grid;
     justify-content: center;
     align-items: center;
+    display: grid;
     height: 100vh;
     background-color: #000000;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
 }
 
 .header {
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: moveToTop 2s forwards 4s;
@@ -26,48 +25,44 @@ body {
     width: 100%;
     height: fit-content;
 }
-
 .logo {
-    font-size: 5vw; /* Use viewport width for font size */
+    font-size: 40px;
     font-weight: bold;
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeSlide 3s forwards;
-    color: #339ef5;
+    color:#339ef5;
 }
-
 @keyframes fadeSlide {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-40px);
     }
     50% {
         opacity: 1;
         transform: translateY(0);
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(-60);
     }
 }
-
 .company-name {
     display: inline-block;
-    font-size: 2vw; /* Use viewport width for font size */
+    font-size: 24px;
     font-weight: bold;
     opacity: 0;
     transform: translateY(-50px);
-    animation: nameSlide 2s forwards 3s;
+    animation: nameSlide 2s forwards 2.5s;
     margin-left: 10px;
 }
-
 @keyframes nameSlide {
     0% {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateX(0);
     }
     100% {
         opacity: 1;
-        transform: translateY(-100px);
+        transform: translateX(0);
     }
 }
 
@@ -75,7 +70,7 @@ body {
     100% {
         top: 0%;
         left: 50%;
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, -100%);
     }
 }
 
@@ -91,45 +86,26 @@ body {
 }
 
 .bubbles {
-    background-color: #ffffff;
+    background-color:#ffffff;
     text-align: center;
     border: #000000;
     border-radius: 15%;
     border-style: solid;
     border-color: #096bdb;
 }
-
-h1 {
-    font-family: 'Orbitron', sans-serif;
+h1, p {                                                    
+    font-family: 'Orbitron',sans-serif;
     font-style: italic;
-    font-size: 5vw; /* Use viewport width for font size */
+    font-size:50px;
     color: #339ef5;
     text-shadow: 3px 0 #096bdb;
 }
 
-h2, p, ul, li {
-    font-family: 'Orbitron', sans-serif;
+h2, ul, li {
+    font-family: 'Orbitron',sans-serif;
     font-style: italic;
-    font-size: 3vw; /* Use viewport width for font size */
+    font-size:20px;
+    font-style: italic;
     color: #339ef5;
     text-shadow: 3px 0 #000000;
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 8vw; /* Adjust logo size for smaller screens */
-    }
-
-    .company-name {
-        font-size: 4vw; /* Adjust company name size */
-    }
-
-    h1 {
-        font-size: 7vw; /* Adjust header size for mobile */
-    }
-
-    h2, p, ul, li {
-        font-size: 4vw; /* Adjust body text size for mobile */
-    }
 }
