@@ -36,14 +36,14 @@ body {
 @keyframes fadeSlide {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-40px);
     }
     50% {
         opacity: 1;
-        transform: translateY(50px);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(-60);
     }
 }
 .company-name {
@@ -52,13 +52,13 @@ body {
     font-weight: bold;
     opacity: 0;
     transform: translateY(-50px);
-    animation: nameSlide 2s forwards 2s;
+    animation: nameSlide 2s forwards 2.5s;
     margin-left: 10px;
 }
 @keyframes nameSlide {
     0% {
         opacity: 0;
-        transform: translateX(-40px);
+        transform: translateX(0);
     }
     100% {
         opacity: 1;
@@ -70,7 +70,7 @@ body {
     100% {
         top: 0%;
         left: 50%;
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, -100%);
     }
 }
 
@@ -93,7 +93,7 @@ body {
     border-style: solid;
     border-color: #096bdb;
 }
-h1 {                                                    
+h1, p {                                                    
     font-family: 'Orbitron',sans-serif;
     font-style: italic;
     font-size:50px;
@@ -101,7 +101,7 @@ h1 {
     text-shadow: 3px 0 #096bdb;
 }
 
-h2, p, ul, li {
+h2, ul, li {
     font-family: 'Orbitron',sans-serif;
     font-style: italic;
     font-size:20px;
