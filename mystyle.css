@@ -1,19 +1,29 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: grid;
     height: 100vh;
     background-color: #000000;
     overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
+.header {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveToTop 2s forwards 4s;
+    white-space: nowrap;
+}
+
 .container {
-    position: relative;
+    position: absolute;
     text-align: center;
     width: 100%;
+    height: fit-content;
 }
 .logo {
     font-size: 40px;
@@ -43,7 +53,6 @@ body {
     opacity: 0;
     transform: translateY(-50px);
     animation: nameSlide 2s forwards 2s;
-    display: inline-block;
     margin-left: 10px;
 }
 @keyframes nameSlide {
@@ -56,19 +65,12 @@ body {
         transform: translateX(0);
     }
 }
-.header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moveToTop 2s forwards 4s;
-    white-space: nowrap;
-}
+
 @keyframes moveToTop {
     100% {
-        top: 5%;
+        top: 0%;
         left: 50%;
-        transform: translate(-50%, -225%);
+        transform: translate(-50%, -100%);
     }
 }
 
