@@ -1,28 +1,97 @@
 body {
-    background-color: #1a1a1a;
-    font-family: 'Orbitron',sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlide 3s forwards;
+    color:#339ef5;
+}
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.company-name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: nameSlide 2s forwards 2s;
+    display: inline-block;
+    margin-left: 10px;
+}
+@keyframes nameSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .header {
-    text-align: center;
-    background-color: #ffffff;
-    border: #339ef5;
-    border-style: solid;
-    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveToTop 2s forwards 4s;
+    white-space: nowrap;
+}
+@keyframes moveToTop {
+    100% {
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -225%);
+    }
 }
 
-.bubbles, .facebook, .instagram, .website {
-    text-align: center;
-    background-color: #ffffff;
-    border: #339ef5;
-    border-style: solid;
-    border-radius: 40px;
-    width: 450px;
-    height: fit-content;
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-
-h1 {
+.bubbles {
+    background-color:#ffffff;
+    text-align: center;
+    border: #000000;
+    border-radius: 15%;
+    border-style: solid;
+    border-color: #096bdb;
+}
+h1 {                                                    
     font-family: 'Orbitron',sans-serif;
     font-style: italic;
     font-size:50px;
@@ -33,7 +102,7 @@ h1 {
 h2, p, ul, li {
     font-family: 'Orbitron',sans-serif;
     font-style: italic;
-    font-size:50px;
+    font-size:20px;
     font-style: italic;
     color: #339ef5;
     text-shadow: 3px 0 #000000;
