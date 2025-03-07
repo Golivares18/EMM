@@ -41,7 +41,24 @@ body {
     border-width: 5px;
     border-radius: 50px;
     border-color:#4185f3;
-    width: 50%;
+    position: absolute;
+    animation: sequential 4s ease-in-out 1s forwards;
+    opacity: 0%;
+}
+
+
+@keyframes sequential {
+    0% {opacity:0;top:50}
+    50% {opacity: 0;top:50;}
+    100% {opacity:1;top: 50%;}
+
+}
+
+@keyframes slideL1 {
+    0% { }
+    50% { }
+    100% { }
+
 }
 
 h1, p {
