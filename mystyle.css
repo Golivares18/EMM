@@ -1,111 +1,41 @@
 body {
-    margin: 0;
-    padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: grid;
     height: 100vh;
-    background-color: #000000;
-    overflow: hidden;
+    margin: 0;
+    background-color: #000;
+    color: white;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
-
-.header {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moveToTop 2s forwards 4s;
-    white-space: nowrap;
-}
-
 .container {
+    position: relative;
     text-align: center;
-    position: absolute;
-    width: 100%;
-    height: fit-content;
-}
-.logo {
-    font-size: 40px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeSlide 3s forwards;
-    color:#339ef5;
-}
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateX(-60);
-    }
-}
-.company-name {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: nameSlide 2s forwards 2.5s;
-    margin-left: 10px;
-}
-@keyframes nameSlide {
-    0% {
-        opacity: 0;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    font-size: 2rem;
+    width: 75%;
+    animation: move 4s ease-in-out 1 forwards;
 }
 
-@keyframes moveToTop {
-    100% {
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -100%);
-    }
+.container img {
+    height: 200px;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+@keyframes move {
+    0% {opacity:0;top:0}
+    50% {opacity: 1;top:0;}
+    100% {opacity:1;top: -30%;}
 }
 
-.bubbles {
-    background-color:#ffffff;
+.name {
+    color: #4185f3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 50px;
+}
+
+h1, p {
     text-align: center;
-    border: #000000;
-    border-radius: 15%;
-    border-style: solid;
-    border-color: #096bdb;
-}
-h1, p {                                                    
-    font-family: 'Orbitron',sans-serif;
+    color: #ffffff;
     font-style: italic;
-    font-size:50px;
-    color: #339ef5;
-    text-shadow: 3px 0 #096bdb;
-}
-
-h2, ul, li {
-    font-family: 'Orbitron',sans-serif;
-    font-style: italic;
-    font-size:20px;
-    font-style: italic;
-    color: #339ef5;
-    text-shadow: 3px 0 #000000;
 }
