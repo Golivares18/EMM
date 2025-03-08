@@ -4,8 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #000;
-    color: white;
+    background-color: #000000;
     font-family: Arial, sans-serif;
     overflow: hidden;
 }
@@ -14,18 +13,18 @@ body {
     text-align: center;
     font-size: 2rem;
     width: 75%;
-    animation: move 4s ease-in-out 1 forwards;
+    animation: moveUp 4s ease-in-out 1 forwards;
     overflow: hidden;
 }
 
-.container img {
+img {
     height: 200px;
 }
 
-@keyframes move {
+@keyframes moveUp {
     0% {opacity:0;top:0}
     50% {opacity: 1;top:0;}
-    100% {opacity:1;top: -30%;}
+    100% {opacity:1;top: -20%;}
 }
 
 .name {
@@ -35,34 +34,68 @@ body {
     font-size: 50px;
 }
 
-.bubbles {
-    background: #e0e0e0;
+.l1, .l2, .r1, .r2 {
+    background: #ffffff;
     border-style: solid;
     border-width: 5px;
     border-radius: 50px;
     border-color:#4185f3;
+    width: 250px;
     position: absolute;
     animation: sequential 4s ease-in-out 1s forwards;
     opacity: 0%;
+    top: 50%;
+}
+
+.l1 {
+    animation: slideL 4s ease-out 3s forwards;
+}
+
+.l2 {
+    animation: slideR 4s ease-out 3s forwards;
+}
+
+.r1 {
+    animation: slideLR 4s ease-out 3s forwards;
+}
+
+.r2 {
+    animation: slideRL 4s ease-out 3s forwards;
+
 }
 
 
 @keyframes sequential {
-    0% {opacity:0;top:50}
-    50% {opacity: 0;top:50;}
+    0% {opacity:0;top:50%}
+    50% {opacity: 0;top:50%;}
     100% {opacity:1;top: 50%;}
 
 }
 
-@keyframes slideL1 {
-    0% { }
-    50% { }
-    100% { }
-
+@keyframes slideL {
+    0% {opacity: 0; top: 50%; transform: translateX(0%);}
+    100% {opacity: 1; top: 50%; transform: translateX(150px) translateY(25px); }
 }
+
+@keyframes slideR {
+    0% {opacity: 0; top: 50%; transform: translateX(0%);}
+    100% {opacity: 1; top: 50%; transform: translateX(-150px) translateY(25px); }
+}
+
+@keyframes slideLR {
+    0% {opacity: 0; top: 50%; transform: translateX(0%);}
+    100% {opacity: 1; top: 50%; transform: translateX(-150px) translateY(150px); }
+}
+
+@keyframes slideRL {
+    0% {opacity: 0; top: 50%; transform: translateX(0%);}
+    100% {opacity: 1; top: 50%; transform: translateX(150px) translateY(150px); }
+}
+
 
 h1, p {
     text-align: center;
     color: #000000;
     font-style: italic;
+    overflow: hidden
 }
