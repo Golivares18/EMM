@@ -34,35 +34,37 @@ img {
     font-size: 50px;
 }
 
-.l1, .l2, .r1, .r2 {
-    background: #ffffff;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 50px;
-    border-color:#4185f3;
-    width: 250px;
+.l1, .l2, .r1, .r2, .m1 {
+    width: 100px;
     position: absolute;
-    animation: sequential 4s ease-in-out 1s forwards;
+    animation: sequential 4.5s ease-in-out 1s forwards;
     opacity: 0%;
     top: 50%;
+    font-size: 2rem;
+    color:#4185f3
 }
 
+
 .l1 {
-    animation: slideL 4s ease-out 3s forwards;
+    animation: slideL 1s ease-out 3s forwards;
 }
 
 .l2 {
-    animation: slideR 4s ease-out 3s forwards;
+    animation: slideR 1s ease-out 3s forwards;
 }
 
 .r1 {
-    animation: slideLR 4s ease-out 3s forwards;
+    animation: slideLR 1s ease-out 3s forwards;
 }
 
 .r2 {
-    animation: slideRL 4s ease-out 3s forwards;
+    animation: slideRL 1s ease-out 3s forwards;
+}
+.m1 {
+    animation: slideM 1s ease-out 3s forwards;
 
 }
+
 
 
 @keyframes sequential {
@@ -90,6 +92,11 @@ img {
 @keyframes slideRL {
     0% {opacity: 0; top: 50%; transform: translateX(0%);}
     100% {opacity: 1; top: 50%; transform: translateX(150px) translateY(150px); }
+}
+
+@keyframes slideM {
+    0% {opacity: 0; top: 50%; transform: translateX(0%);}
+    100% {opacity: 1; top: 50%; transform: translateX(0) translateY(250px); }
 }
 
 
