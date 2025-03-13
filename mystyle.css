@@ -41,9 +41,29 @@ img {
     opacity: 0%;
     top: 50%;
     font-size: 2rem;
-    color:#4185f3
 }
 
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #4185f3;
+    font-size: 4rem;
+}
+
+a {
+    position: absolute;
+    left: 50%;
+    color: #4185f3;
+    
+}
 
 .l1 {
     animation: slideL 1s ease-out 3s forwards;
