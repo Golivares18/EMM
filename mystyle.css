@@ -31,7 +31,7 @@ img {
     color: #4185f3;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
-    font-size: 50px;
+    font-size: 4rem;
 }
 
 .l1, .l2, .r1, .r2, .m1 {
@@ -51,11 +51,14 @@ img {
     gap: 20px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     width: 100%;
+}
+
+.icons-container i {
     color: #4185f3;
-    font-size: 4rem;
+    font-size: 5.5rem;
 }
 
 a {
